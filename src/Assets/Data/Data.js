@@ -74,6 +74,11 @@ export const SidebarData = {
       location: "addquestion",
     },
     {
+      icon: UilUsersAlt,
+      heading: "Add Student",
+      location: "addstudent",
+    },
+    {
       icon: UilPackage,
       heading: "Profile",
       location: "profile",

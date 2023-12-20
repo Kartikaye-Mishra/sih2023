@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import "./Regis.css"; // Import CSS file
 import { useNavigate } from "react-router-dom";
+import "./AddStudent.css"
 
 const RegistrationPage = () => {
   const [formData, setFormData] = useState({
@@ -29,7 +29,7 @@ const RegistrationPage = () => {
       role: formData.selectedOption,
       username: formData.username,
     };
-    fetch("http://172.172.170.251:5000/api/v1/user/register", {
+    fetch("http://localhost:5000/api/v1/user/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -102,33 +102,8 @@ const RegistrationPage = () => {
         {/* ... */}
 
         {/* Radio buttons */}
-        <div className="form-group">
-          <label>Select the Role:</label>
-          <div>
-            <label>
-              <input
-                type="radio"
-                name="selectedOption"
-                value="student"
-                checked={formData.selectedOption === "student"}
-                onChange={handleRadioChange}
-              />
-              Student
-            </label>
-          </div>
-          <div>
-            <label>
-              <input
-                type="radio"
-                name="selectedOption"
-                value="teacher"
-                checked={formData.selectedOption === "teacher"}
-                onChange={handleRadioChange}
-              />
-              Teacher
-            </label>
-          </div>
-        </div>
+        
+       
 
         {/* Submit button */}
         <button className="submit-btn" type="submit">

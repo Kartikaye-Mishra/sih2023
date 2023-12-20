@@ -73,7 +73,7 @@ function StudentTest() {
       })
       .then((data) => {
         console.log("Success:", data);
-        navigate('student/report')
+        navigate('/student/report')
         
       })
       .catch((error) => {

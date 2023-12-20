@@ -5,7 +5,7 @@ import Dashboard from "./Container/Student/Dashboard/Dashboard";
 import StudentOutlet from "./Container/Student/StudentOutlet";
 import Report from "./Container/Student/Reports/Report";
 import TeacherOutlet from "./Container/Teacher/TeacherOutlet";
-import Login from "./Container/Common/Login/Login";
+import Login from "./Container/Common/Login/login";
 import Profile from "./Container/Student/Profile/Profile";
 import AddQuestion from "./Container/Teacher/AddQuestion/AddQuestion";
 import MyStudent from "./Container/Teacher/My Students/StudentList";
@@ -14,12 +14,14 @@ import Counselling from "./Container/Student/Counselling/Counselling";
 import StudentTest from "./Container/Student/StudentTest/MainPage";
 import AddFeedback from "./Container/Teacher/AddFeedback.js/AddFeedback";
 import RegistrationPage from "./Container/Common/Registration/Regis";
+import AddStudent from "./Container/Teacher/AddStudents/AddStudent";
 function App() {
   return (
     <div className="root_container">
       <div className="main">
         <BrowserRouter>
           <Routes>
+            
             <Route path="/" element={<Landing />}></Route>
             <Route path="/login" element={<Login />}></Route>
             <Route path="/test" element={<StudentTest/>}></Route>
@@ -38,6 +40,7 @@ function App() {
             <Route path="/teacher" element={<TeacherOutlet />}>
               {/* <Route path="" element={<Dashboard />}></Route> */}
               <Route path="addquestion" element={<AddQuestion />}></Route>
+              <Route path="addstudent" element={<AddStudent/>}></Route>
               <Route path="addfeedback" element={<AddFeedback />}></Route>
               <Route path="" element={<MyStudent />}></Route>
               <Route path="profile" element={<Profile />}></Route>
