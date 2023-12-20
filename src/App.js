@@ -4,17 +4,18 @@ import Landing from "./Container/Common/Landing/Landing";
 import Dashboard from "./Container/Student/Dashboard/Dashboard";
 import StudentOutlet from "./Container/Student/StudentOutlet";
 import Report from "./Container/Student/Reports/Report";
+import TeacherReport from "./Container/Teacher/Reports/Report";
 import TeacherOutlet from "./Container/Teacher/TeacherOutlet";
 import Login from "./Container/Common/Login/login";
 import Profile from "./Container/Student/Profile/Profile";
-import AddQuestion from "./Container/Teacher/AddQuestion/AddQuestion";
+import AddQuestion from "./Container/Teacher/AddQuestion/AddStudent";
 import MyStudent from "./Container/Teacher/My Students/StudentList";
 import Training from "./Container/Student/Training/Training"
 import Counselling from "./Container/Student/Counselling/Counselling";
 import StudentTest from "./Container/Student/StudentTest/MainPage";
 import AddFeedback from "./Container/Teacher/AddFeedback.js/AddFeedback";
 import RegistrationPage from "./Container/Common/Registration/Regis";
-import AddStudent from "./Container/Teacher/AddStudents/AddStudent";
+import MainPractise from "./Container/Student/Training/StudentPractice/MainPractice";
 function App() {
   return (
     <div className="root_container">
@@ -26,6 +27,7 @@ function App() {
             <Route path="/login" element={<Login />}></Route>
             <Route path="/test" element={<StudentTest/>}></Route>
             <Route path="/register" element={<RegistrationPage/>}></Route>
+            <Route path="/training_test" element={<MainPractise/>}></Route>
             <Route path="/student" element={<StudentOutlet />}>
               <Route path="" element={<Dashboard />}></Route>
               {/* <Route path="profile" element={<Profile />}></Route> */}
@@ -40,7 +42,6 @@ function App() {
             <Route path="/teacher" element={<TeacherOutlet />}>
               {/* <Route path="" element={<Dashboard />}></Route> */}
               <Route path="addquestion" element={<AddQuestion />}></Route>
-              <Route path="addstudent" element={<AddStudent/>}></Route>
               <Route path="addfeedback" element={<AddFeedback />}></Route>
               <Route path="" element={<MyStudent />}></Route>
               <Route path="profile" element={<Profile />}></Route>

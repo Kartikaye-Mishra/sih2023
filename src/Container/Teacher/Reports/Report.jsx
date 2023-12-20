@@ -2,11 +2,14 @@ import React, { useState, useEffect } from "react";
 import Cards from "../../../Components/Cards/Cards";
 import "./Report.css";
 import axios from "axios";
+import { useLocation } from "react-router-dom";
 function Report() {
-  let id = localStorage.getItem("userId") || "656c99945f8f9d21d69c548c";
+  const { state } = useLocation();
+  const student_id = state?.student_id;
+  let id = student_id;
 
   const [cardData, setCardData] = useState([]);
-  const [faculty, setfaculty] = useState(1);
+  const [faculty, setfaculty] = useState(null);
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -44,7 +47,7 @@ function Report() {
       ) : (
         <>
           <div className="MainDash">
-            <h5>Your Teacher Feedback is pending</h5>
+            <h5>Student Test is pending</h5>
             <Cards cardData={cardData} />
           </div>
         </>
