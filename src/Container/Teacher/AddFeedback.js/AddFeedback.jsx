@@ -1,14 +1,18 @@
 import { Box, Button, Container } from "@mui/material";
+
 import React, { useEffect, useState } from "react";
 import "./MainPage.css";
 import McqQuestion from "./McqQuestion";
 import { useLocation, useNavigate } from "react-router-dom";
+import "./AddFeedback.css"
+
 
 function AddFeedback() {
   const [questions, setquestions] = useState([]);
   const [answer, setAnswer] = useState({});
   const { state } = useLocation();
   const student_id = state?.student_id;
+  
 
   useEffect(() => {
     fetch(`http://172.172.170.251:5000/api/v1/faculty/getquestion`)
@@ -80,6 +84,7 @@ function AddFeedback() {
 
   return (
     <>
+   
       {questions && questions.length > 0 && (
         <Container maxWidth="lg">
           <McqQuestion
@@ -94,6 +99,7 @@ function AddFeedback() {
             // width={"100%"}
             display={"flex"}
             padding={"15px"}
+            
           >
             <Button
               variant="contained"
@@ -121,6 +127,7 @@ function AddFeedback() {
           </Box>
         </Container>
       )}
+
     </>
   );
 }

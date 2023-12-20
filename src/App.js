@@ -16,6 +16,7 @@ import StudentTest from "./Container/Student/StudentTest/MainPage";
 import AddFeedback from "./Container/Teacher/AddFeedback.js/AddFeedback";
 import RegistrationPage from "./Container/Common/Registration/Regis";
 import MainPractise from "./Container/Student/Training/StudentPractice/MainPractice";
+import AddStudent from "./Container/Teacher/AddQuestion/AddStudent";
 function App() {
   return (
     <div className="root_container">
@@ -37,12 +38,13 @@ function App() {
 
             </Route>
 
-
+{/* http://172.172.170.251:5000 */}
 
             <Route path="/teacher" element={<TeacherOutlet />}>
               {/* <Route path="" element={<Dashboard />}></Route> */}
               <Route path="addquestion" element={<AddQuestion />}></Route>
               <Route path="addfeedback" element={<AddFeedback />}></Route>
+              <Route path="addStudent" element={<AddStudent />}></Route>
               <Route path="" element={<MyStudent />}></Route>
               <Route path="profile" element={<Profile />}></Route>
               <Route path="report" element={<Report />}></Route>

@@ -73,11 +73,7 @@ export const SidebarData = {
       heading: "Add Student",
       location: "addStudent",
     },
-    {
-      icon: UilUsersAlt,
-      heading: "Add Student",
-      location: "addstudent",
-    },
+
     {
       icon: UilPackage,
       heading: "Profile",

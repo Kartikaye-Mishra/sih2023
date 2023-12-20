@@ -71,6 +71,9 @@
   align-items: center;
   justify-content: space-around;
   padding: 1rem;
+  position: fixed;
+    top: 2rem;
+    left: 25rem;
 }
 .ExpandedCard > span:nth-of-type(1) {
   color: white;
